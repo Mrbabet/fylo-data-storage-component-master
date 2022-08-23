@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,p {
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: initial;
+  }
+}
+p,span{
+  color: white;
+}
+body{
+  background-image: url(/images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.4s ease-in-out;
+  font-family: 'Raleway', sans-serif;
+}
+.wrapper{
+    flex-direction: column;
+    gap: 1rem;
+    margin: 24px;
+   
+}
+.flex{
+  display: flex;
+}
+.bg-color{
+background-color: #1E2D69;
+}
+.first-container{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 100px 10px 10px;
+  max-width: 350px;
+  height: 201px;
+  gap: 2rem;
+  .icon-container{
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    .icon{
+      height: 48px;
+      width: 48px;
+      background-color: #0C122C;
+      border-radius: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+}
+.second-container{
+  max-width: 350px;
+  height: 160px;
+  gap: 2rem;
+  border-radius: 10px;
+  position: relative;
+  justify-content: center;
+ 
+
+  
+ 
+  .second-container__wrapper{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 1rem;
+
+    .text{
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .proggress-bar{
+      width: 100%;
+      height: 20px;
+      background-color: #0C122C;
+      border-radius: 10px;
+      .proggress-bar-color{
+        width: 81.50%;
+        background: linear-gradient(90deg, #FFA197 0%, #FF4A95 100%);
+        border-radius: 8px;
+        position: relative;
+        
+        }
+        .proggress-bar-color::after{
+          content: "";
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background-color: white;
+          position: absolute;
+          right: 3px;
+          top: 3px;
+      }
+    
+      
+    }
+    
+
+    p{
+      margin-inline: 1rem;
+      font-size: 14px;
+    }
+    span{
+      font-size: 12px;
+    }
+  }
+  .space-left{
+    width: 179px;
+    height: 72px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    transform: translate(0%, 50%);
+    z-index: 0;
+
+   
+
+    p{color: black;
+      margin: 24px 16px 24px 16px;
+    }
+    
+  }
+}
+
+@media screen and (min-width:750px) {
+
+  body{
+    background-image: url(/images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  background-position: center;
+  transition: 0.4s ease-in-out;
+  }
+  .wrapper{
+    margin: 24px;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+}
+.first-container{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 100px 10px 10px;
+  max-width: 350px;
+  height: 201px;
+  gap: 2rem;
+  flex-basis: 100%;
+}
+.second-container{
+  max-width: 540px;
+  height: 160px;
+  gap: 2rem;
+  border-radius: 10px;
+  position: relative;
+  flex-basis: 100%;
+
+  
+}}
